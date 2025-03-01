@@ -6,9 +6,9 @@ import Cards from "./Cards";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-export default function NewsItem() {
+export default function NewsItem({category}) {
   const [page, setPage] = useState(1);
-  const { data, loading } = FetchNewsApi(page); 
+  const { data, loading } = FetchNewsApi(page,category); 
 
   return (
     <Box>
