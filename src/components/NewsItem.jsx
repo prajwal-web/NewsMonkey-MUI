@@ -10,14 +10,17 @@ export default function NewsItem({category}) {
   const [page, setPage] = useState(1);
   const { data, loading } = FetchNewsApi(page,category); 
 
+  
+
+
   return (
-    <><Box>
+    <><Box >
       {loading ? (
         <Box display="flex" justifyContent="center" alignItems="center" minHeight="50vh" width='100vw'>
           <CircularProgress />
         </Box>
       ) : (
-        <Grid2 container spacing={2} justifyContent="center">
+        <Grid2 container spacing={2} justifyContent="center" >
           {data.slice(0, 20).map((item, index) => (
             <Grid2 item xs={12} sm={6} md={3} key={index}>
               <Cards item={item} />

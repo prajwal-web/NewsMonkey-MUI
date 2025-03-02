@@ -13,7 +13,7 @@ export default function NewsComponent() {
   
   return (
     <>
-     <Box  display='flex' justifyContent='space-between'>
+     <Box  display='flex' justifyContent='space-between' >
      <Typography textAlign='center' variant='h3' sx={{fontFamily:'cursive',marginBottom:'20px'}}>NewsMonkey - Top Headlines</Typography>
       <FormControl  sx={{width:200,marginRight:5}}>
         <InputLabel id="demo-simple-select-label"> Category</InputLabel>
@@ -28,12 +28,11 @@ export default function NewsComponent() {
           <MenuItem value="entertainment">Entertainment</MenuItem>
           <MenuItem value="sports">Sports</MenuItem>
           <MenuItem value="technology">Technology</MenuItem>
-          <MenuItem value="science">Science</MenuItem>
         </Select>
       </FormControl>
     </Box>
    
-     <Grid2 container spacing={3}>
+     <Grid2 container spacing={3} >
       <NewsItem category={category}/>
       </Grid2>
     </>

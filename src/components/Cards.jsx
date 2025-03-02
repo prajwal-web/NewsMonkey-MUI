@@ -10,6 +10,8 @@ import Typography from '@mui/material/Typography';
 export default function Cards({item}) {
   return (
     <>
+
+ 
     <Card sx={{ maxWidth: 345, height: '470px' }}>
       <CardMedia
         sx={{ height: 140 }}
