@@ -23,7 +23,7 @@ export default function Cards({item}) {
           {item.title}
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          {item.description == "undefined" ? item.description.slice(0, 50) : "President Trump has ramped up actions in the US-China trade war, with potential new tariffs. China, though muted in response, has ways to retaliate, including "}
+          {item.description == "undefined" ? item.description : "President Trump has ramped up actions in the US-China trade war, with potential new tariffs. China, though muted in response, has ways to retaliate, including "}
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
           {item.publishedAt}

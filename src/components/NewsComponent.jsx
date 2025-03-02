@@ -27,6 +27,8 @@ export default function NewsComponent() {
           <MenuItem value="business">business</MenuItem>
           <MenuItem value="entertainment">Entertainment</MenuItem>
           <MenuItem value="sports">Sports</MenuItem>
+          <MenuItem value="technology">Technology</MenuItem>
+          <MenuItem value="science">Science</MenuItem>
         </Select>
       </FormControl>
     </Box>

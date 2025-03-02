@@ -8,7 +8,7 @@ export default function FetchNewsApi(page,category) {
     const getData = async () => {
       setLoading(true); 
         const response = await fetch(
-          `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=6798cc7847714673a40bdc8870fbc85c&page=${page}`
+          `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=6798cc7847714673a40bdc8870fbc85c&page=${page}&skip=20`
         );
         const result = await response.json();
         setData(result.articles ); 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FetchNewsApi from "./FetchNewsApi";
-import { Box, Button, CircularProgress } from "@mui/material";
+import { Box, Button, CircularProgress,Typography } from "@mui/material";
 import Grid2 from "@mui/material/Grid2";
 import Cards from "./Cards";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -11,7 +11,7 @@ export default function NewsItem({category}) {
   const { data, loading } = FetchNewsApi(page,category); 
 
   return (
-    <Box>
+    <><Box>
       {loading ? (
         <Box display="flex" justifyContent="center" alignItems="center" minHeight="50vh" width='100vw'>
           <CircularProgress />
@@ -26,7 +26,7 @@ export default function NewsItem({category}) {
         </Grid2>
       )}
 
-     {!loading&& <Box display="flex" justifyContent="center" alignItems="center" mt={3}>
+      {!loading && <Box display="flex" justifyContent="center" alignItems="center" mt={3}>
         <Button
           variant="contained"
           sx={{ mx: 2, color: "white", background: "black" }}
@@ -45,8 +45,8 @@ export default function NewsItem({category}) {
         >
           Next
         </Button>
-      </Box>} 
-      
-    </Box>
+      </Box>}
+
+    </Box></>
   );
 }
